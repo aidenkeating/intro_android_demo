@@ -1,4 +1,4 @@
-node('android') {
+node('maven') {
     stage 'Checkout'
     checkout scm
 
