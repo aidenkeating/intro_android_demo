@@ -2,46 +2,18 @@
     "kind": "BuildConfig",
     "apiVersion": "v1",
     "metadata": {
-        "name": "sample-android",
-        "creationTimestamp": null,
-        "labels": {
-            "rhmap/domain": "rhmap",
-            "rhmap/env": "dev",
-            "rhmap/guid": "qkdv7ubf722fanbkuz3lbzfs",
-            "rhmap/project": "qkdv7ugocafgzh4q3lgrfez3"
-        },
-        "annotations": {
-            "description": "Defines how to build the application",
-            "rhmap/description": "",
-            "rhmap/title": "Cloud App"
-        }
+        "name": "sample-android"
     },
     "spec": {
-        "triggers": [
-            {
-                "type": "ImageChange",
-                "imageChange": {}
-            }
-        ],
-        "runPolicy": "SerialLatestOnly",
         "source": {
-            "type": "Git",
             "git": {
-                "uri": "https://github.com/maleck13/intro_android_demo.git",
-                "ref": "1a357b1b9cffd99b7e58176db76c0f77688dde22"
+                "uri": "https://github.com/maleck13/intro_android_demo.git"
             }
-            // "sourceSecret": {
-            //     "name": "sample-android-scmsecret"
-            // }
         },
         "strategy": {
             "jenkinsPipelineStrategy": {
                    "jenkinsfilePath":"./Jenkinsfile.groovy" }
-        },
-        "resources": {},
-        "postCommit": {}
-    },
-    "status": {
-        "lastVersion": 0
+        }
     }
 }
+
