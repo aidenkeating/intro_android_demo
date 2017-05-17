@@ -1,7 +1,7 @@
-/**
-* Android Jenkinsfile
-*/
 node('android') {
+    stage 'Checkout'
+    checkout scm
+
     stage 'Build'
     sh "./gradlew clean assembleDebug"
 
