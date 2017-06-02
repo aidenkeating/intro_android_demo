@@ -1,5 +1,6 @@
-node('android') {
+node('master') {
     stage 'Checkout'
+    print "DEBUG: parameter isFoo = ${params.isFoo}"
     checkout scm
 
     stage 'Build'
